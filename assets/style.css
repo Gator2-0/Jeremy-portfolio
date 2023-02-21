@@ -1,5 +1,5 @@
 :root{
-  --header-height: 30%;
+  --header-height: 200px;
   --details-height: 20vw;
 }
 
@@ -12,59 +12,44 @@ body{
 }
 
 header{
-  background-color: rgb(41, 51, 48);
+  background-color: rgb(65, 128, 109);
   height: var(--header-height);
-  width: 100vw;
-  position: fixed;
-  z-index: 99;
-  
-}
-
-.header-img{
-  height:  100%;
-  width: 100vw;
-  object-fit: cover;
-  box-shadow: 0 0.5vw 0.5vw black;
-  
+  width: 100%;
+  display:flex ;
+  justify-content: space-between;
+  padding:20px
 }
 
 .portfolio-title{
   color: rgb(212, 212, 212);
-  position: fixed;
-  top: 4vw;
-  right: 4vw;
-  text-align: right;
-  height: 6vw;
-  width: 50vw;
+
   font-size: 6vw;
 }
 
-.avatar{
-  background-color: white;
-  height: 10vw;
-  width: 10vw;
-  position: fixed;
-  top: 1.5vw;
-  left: 3vw;
+.avatar-image{
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
+  background-color: white;
+  object-fit: cover;
 }
 
 .details{
-  position: fixed;
+  
   display: flex;
   top: var(--header-height);
-  background-color: rgb(150, 150, 150);
-  box-shadow: 0.5vw 0.5vw 10px black;
+  background-color: rgb(65, 128, 109);
+  
   height: var(--header-height);
   justify-content: space-between;
+  align-items: center;
   
 }
 
 .small-description{
-  padding-top: 1vw;
+  padding-top: 10px;
   padding-left: 0.75vw;
   font-size: large;
-  font-family: sans-serif;
   width: 45%;
   text-align: center;
   
@@ -81,11 +66,11 @@ header{
 }
 
 #a::after{
-  content:"⭐⭐☆☆☆";
+  content:"⭐☆☆☆☆";
 }
 
 #b::after{
-  content:"⭐⭐☆☆☆";
+  content:"⭐☆☆☆☆";
 }
 
 #c::after{
@@ -114,28 +99,69 @@ header{
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  width: 100vw;
-  background-color: aqua;
-  padding-left: var(--left-column-width);
-  padding-top: var(--header-height);
-  padding-bottom: 5vw;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
 }
 
 .current-project-card{
-  background-color: black;
-  height: 15vw;
-  width: 75vw;
-  margin: 2vw;
+  height: 250px;
+  width: 80%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image{
+  height: 80%;
+}
+
+.project-image img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+  object-position: center;
+}
+
+
+
+.project-details{
+  height:20%;
+  background-color: rgb(177, 177, 180);
+  display: flex;
+}
+
+.project-title{
+  width: 40%;
+}
+
+.project.languages{
+  width: 60%;
+  text-align: end;
 }
 
 .project-card{
 
   background-color: black;
 
-  height: 15vw;
-  width: 35.5vw;
+  height: 250px;
+  width: 38%;
   margin: 2vw;
 
 
+}
+
+footer{
+  height:50px;
+  text-align: center;
+}
+
+footer a{
+  color: rgb(61, 61, 194);
+  font-weight:bolder
+}
+
+footer a:hover{
+  color: rgb(89, 89, 235);
 }
 
