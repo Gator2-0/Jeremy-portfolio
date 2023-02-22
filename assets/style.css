@@ -1,19 +1,17 @@
 :root{
   --header-height: 200px;
-  --details-height: 20vw;
+  
 }
 
 *{
   font-family: 'Roboto', sans-serif;
 }
 
-body{
-  background-color: rgb(212, 212, 212);
-  
-}
-
+/*I have decide to split the header in two section for easily modify the appearance of the web page in future version.
+ie: setting one part as positio:fixed and the other as a  left-hand column.
+This header contains my name and an avatar*/
 header{
-  background-color: rgb(65, 128, 109);
+  background-image: url(./matrix.png);
   height: var(--header-height);
   width: 100%;
   display:flex ;
@@ -36,6 +34,7 @@ header{
   object-fit: cover;
 }
 
+/*This section contains information about myself and my skills as well as way to contact me.*/
 .details{
   display: flex;
   top: var(--header-height);
@@ -49,7 +48,13 @@ header{
 
 .about-me-container{
   width: 60%;
+  text-align: center;
   
+}
+
+.about-me-container a{
+  margin-left: 50px;
+  font-weight: bolder;
 }
 
 h1{
@@ -76,6 +81,7 @@ h1{
   font-weight: 700;
 }
 
+/* The next section creates a star rating system after each skills*/
 #a::after{
   content:"⭐☆☆☆☆";
 }
@@ -106,6 +112,7 @@ h1{
   
 }
 
+/* The main container contains all the project cards*/
 .main-container{
   display: flex;
   flex-wrap: wrap;
@@ -115,12 +122,9 @@ h1{
   justify-content: center;
   
 }
-
-.current-project-card, .project-card{
-  box-shadow: 5px 5px 5px black;
-  opacity: 0.5;
-
-}
+/*There are 2 type of project card. The current one and all others.
+the current card is twice the size of a normal one but everyting else is the same.
+The most current project I have been working on*/
 .current-project-card{
   height: 250px;
   width: 80%;
@@ -131,6 +135,7 @@ h1{
   opacity: 0.5;
 }
 
+/*All other projects*/
 .project-card{
   height: 250px;
   width: 38%;
@@ -140,6 +145,8 @@ h1{
 
 }
 
+/*Every project card posses a screenshot of the application, a title linked to
+ the deployed app and a list of languages used for this project. */
 .project-image{
   height: 80%;
   
@@ -152,7 +159,7 @@ h1{
   object-position: center;
 }
 
-.project-details{
+.project-details, .project-details a{
   height:20%;
   background-color: rgb(177, 177, 180);
   display: flex;
@@ -170,6 +177,7 @@ h1{
   
 }
 
+
 .project-languages{
   width: 40%;
   padding-right: 10px;
@@ -178,9 +186,18 @@ h1{
   
 }
 
+/*the cards opcity has been modified to render a better visual effect when hovering over them.*/
+
+.current-project-card, .project-card{
+  box-shadow: 5px 5px 5px black;
+  opacity: 0.5;
+
+}
+
 .current-project-card:hover, .project-card:hover{
   opacity: 1;
 }
+
 
 footer{
   height:50px;
@@ -197,7 +214,7 @@ footer a:hover{
   color: rgb(89, 89, 235);
 }
 
-/* Tablets */
+/* Tablets size - The section containing the 'about me', 'skills' and links become vertical*/
 @media screen and (max-width: 992px) {
  
   .details{
@@ -206,7 +223,7 @@ footer a:hover{
   }
 }
 
-/* Large smartphones - navbar changes color */
+/* Large smartphones - there is only one project card per row and the skill section disapear to look less crowded */
 @media screen and (max-width: 768px) {
   
   .project-card{
@@ -219,7 +236,7 @@ footer a:hover{
 
 }
 
-/* Small smartphones - image placeholders change color */
+/* Small smartphones - the about me section disapear to leave on the links */
 @media screen and (max-width: 576px) {
   
   .about-me-container{
