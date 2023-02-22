@@ -9,6 +9,7 @@
 
 body{
   background-color: rgb(212, 212, 212);
+  
 }
 
 header{
@@ -22,8 +23,9 @@ header{
 
 .portfolio-title{
   color: rgb(212, 212, 212);
-
-  font-size: 6vw;
+  font-size: 40px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .avatar-image{
@@ -35,30 +37,39 @@ header{
 }
 
 .details{
-  
   display: flex;
   top: var(--header-height);
   background-color: rgb(65, 128, 109);
-  
   height: var(--header-height);
   justify-content: space-between;
   align-items: center;
+  color: rgb(212, 212, 212);
   
 }
 
-.small-description{
-  padding-top: 10px;
-  padding-left: 0.75vw;
-  font-size: large;
-  width: 45%;
+.about-me-container{
+  width: 60%;
+  
+}
+
+h1{
+  padding-left: 10px;
   text-align: center;
-  
-  
+}
+.small-description{
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 2px;
+  font-size: large;
+  width: 100%;
+  text-align: center;
 }
 
 .contact-details-container{
   
   padding-top:1%;
+  margin-right: 10px;
 }
 
 .skills li{
@@ -100,20 +111,38 @@ header{
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: rgb(248, 247, 247);
   justify-content: center;
+  
 }
 
+.current-project-card, .project-card{
+  box-shadow: 5px 5px 5px black;
+  opacity: 0.5;
+
+}
 .current-project-card{
   height: 250px;
   width: 80%;
   margin: 2%;
   display: flex;
   flex-direction: column;
+  box-shadow: 5px 5px 5px black;
+  opacity: 0.5;
+}
+
+.project-card{
+  height: 250px;
+  width: 38%;
+  margin: 2%;
+  box-shadow: 5px 5px 5px black;
+  opacity: 0.5;
+
 }
 
 .project-image{
   height: 80%;
+  
 }
 
 .project-image img{
@@ -123,37 +152,40 @@ header{
   object-position: center;
 }
 
-
-
 .project-details{
   height:20%;
   background-color: rgb(177, 177, 180);
   display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+  font-weight: bolder;
+  color: white;
+  
 }
 
 .project-title{
-  width: 40%;
-}
-
-.project.languages{
   width: 60%;
-  text-align: end;
+  padding-left: 10px;
+  padding-top: 10px;
+  
 }
 
-.project-card{
+.project-languages{
+  width: 40%;
+  padding-right: 10px;
+  text-align: end;
+  padding-top: 10px;
+  
+}
 
-  background-color: black;
-
-  height: 250px;
-  width: 38%;
-  margin: 2vw;
-
-
+.current-project-card:hover, .project-card:hover{
+  opacity: 1;
 }
 
 footer{
   height:50px;
   text-align: center;
+  
 }
 
 footer a{
@@ -165,3 +197,32 @@ footer a:hover{
   color: rgb(89, 89, 235);
 }
 
+/* Tablets */
+@media screen and (max-width: 992px) {
+ 
+  .details{
+    flex-direction: column;
+    height:auto;
+  }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  
+  .project-card{
+    width: 80%;
+  }
+
+  .skills{
+    display: none;
+  }
+
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  
+  .about-me-container{
+    display: none;
+  }
+}
