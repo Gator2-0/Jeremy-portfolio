@@ -83,15 +83,15 @@ h1{
 
 /* The next section creates a star rating system after each skills*/
 #a::after{
-  content:"⭐☆☆☆☆";
+  content:"⭐⭐☆☆☆";
 }
 
 #b::after{
-  content:"⭐☆☆☆☆";
+  content:"⭐⭐☆☆☆";
 }
 
 #c::after{
-  content:"⭐☆☆☆☆";
+  content:"⭐⭐⭐☆☆";
 }
 
 #d::after{
@@ -103,7 +103,7 @@ h1{
 }
 
 #f::after{
-  content:"⭐☆☆☆☆";
+  content:"⭐⭐☆☆☆";
 }
 
 .contact-details{
